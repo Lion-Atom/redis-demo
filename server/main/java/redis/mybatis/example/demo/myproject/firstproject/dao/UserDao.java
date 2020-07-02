@@ -19,7 +19,7 @@ public interface UserDao {
      * @param id 用户标识
      * @return 用户信息
      */
-    List<Map> getById(@Param("id") Integer id);
+    List<Map> getById(Integer id);
 
     /**
      * 根据用户标识集合批量查询用户信息

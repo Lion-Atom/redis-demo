@@ -7,11 +7,11 @@
     </select>
     <!--批量查询用户信息-->
     <select id="getByIds" resultType="map" parameterType="java.util.ArrayList">
-        select * from user where id in (
-        <foreach collection="list" item="id" index="index" separator=",">
+        select * from user where id in
+        <foreach collection="list" item="id" index="index" open="(" close=")" separator=",">
             #{id}
         </foreach>
-        )
+
     </select>
 
 </mapper>
